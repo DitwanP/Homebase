@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import { FormGroup, Form, FormControl, Button, Col } from 'react-bootstrap';
+import { FormGroup, Form, Button, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class TodoInputForm extends React.Component {
