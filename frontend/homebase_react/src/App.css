@@ -19,11 +19,11 @@ header {
 }
 
 body {
-    background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('./static/leaves2.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('./static/foggy-mountain.jpg');
     background-size: cover;
     background-position: center;
     font-family: "Poppins", sans-serif;
-    min-height: 100%;
+    min-height: 100vh;
 }
 
 
