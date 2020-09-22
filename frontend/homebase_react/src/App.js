@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import  {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import  {BrowserRouter as Router, Route} from 'react-router-dom';
 import TodoListView from './containers/TodoListView';
 import TodoInputForm from './components/TodoInputForm';
 import NavBar from './components/NavBar';
