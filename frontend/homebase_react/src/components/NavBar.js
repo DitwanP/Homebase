@@ -6,10 +6,18 @@ function BootstrapNavbar() {
         <div className="navbar-container">
             <nav>
                 <div className="logo">
-                    HOMEBASE
+                    <a className="logo-link" href="."> HOMEBASE </a>
                 </div>
                 <div className="site-links">
                     <ul>
+                        <li>
+                            <a 
+                            className="hoverable" 
+                            href="./todo"  
+                            rel="noopener noreferrer">
+                                <FontAwesomeIcon icon={['fas', 'list']} />
+                            </a>
+                        </li>
                         <li>
                             <a 
                             className="hoverable" 

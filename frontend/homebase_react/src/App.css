@@ -19,7 +19,7 @@ header {
 }
 
 body {
-    background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('./static/foggy-mountain.jpg');
+    background: linear-gradient( #7b4397 0%, #dc2430 100%);
     background-size: cover;
     background-position: center;
     font-family: "Poppins", sans-serif;
@@ -31,13 +31,13 @@ body {
 .navbar-container {
     width: 100%;
     height: 8rem;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.4);
     position: fixed;
     top: 0rem;
     left: 0rem;
 }
 
-.logo {
+.logo-link {
     line-height: 60px;
     position: fixed;
     float: left;
@@ -46,6 +46,11 @@ body {
     font-weight: bold;
     font-size: 20px;
     letter-spacing: 2px;
+}
+
+.logo-link:hover {
+    text-decoration: none;
+    color: orangered;
 }
 
 nav {
@@ -85,7 +90,7 @@ nav ul li a {
     vertical-align: middle;
     position:relative;
     box-shadow: 0 0 1px rgba(0,0,0,0);
-    color: rgb(204, 204, 204);
+    color: white;
     transform: translateZ(0);
     transition-duration: .3s;
     transition-property:transform;
@@ -107,7 +112,7 @@ transition-property: transform, opacity;
 
 .hoverable:hover{
     transform: translateY(-5px);
-    color: tomato;
+    color: orangered;
     text-decoration: none;
 }
 .hoverable:hover::before, .hoverable:active:before, .hoverable:focus::before{
@@ -128,7 +133,7 @@ transform: translateY(-5px);
     margin-top: 15rem;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.4);
     padding: 2rem;
     border-radius: 2rem;
 }
@@ -211,7 +216,7 @@ transform: translateY(-5px);
     height: 100%;
     left: 0rem;
     bottom: -0.1rem;
-    border-bottom: 0.2rem solid tomato;
+    border-bottom: 0.2rem solid orangered;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
 }
@@ -234,14 +239,14 @@ transform: translateY(-5px);
 .todo-title-form input:valid + .title-label .title-span {
     transform: translateY(-80%);
     font-size: 1.6rem;
-    color: tomato;
+    color: orangered;
 }
 
 .todo-description-form input:focus + .description-label .description-span, 
 .todo-description-form input:valid + .description-label .description-span {
     transform: translateY(-80%);
     font-size: 1.6rem;
-    color: tomato;
+    color: orangered;
 }
 
 .todo-title-form input:focus + .title-label::after, 
@@ -275,7 +280,7 @@ transform: translateY(-5px);
 }
 
 .add-todo-button:hover{
-    color: tomato;
+    color: orangered;
 } 
 /* THE STYLING FOR THE TODO INPUT FORM ENDS HERE */
 
@@ -290,7 +295,7 @@ transform: translateY(-5px);
     align-items: center;
     width: 60%;
     margin: 2rem auto;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.4);
     padding: 2rem;
     border-radius: 2rem;
 }
