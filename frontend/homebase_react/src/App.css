@@ -19,7 +19,7 @@ header {
 }
 
 body {
-    background: linear-gradient( #7b4397 0%, #dc2430 100%);
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./static/japan-arch.jpg');
     background-size: cover;
     background-position: center;
     font-family: "Poppins", sans-serif;
@@ -120,6 +120,32 @@ opacity: 1;
 transform: translateY(-5px);
 }
 /* THE STYLING FOR THE NAV BAR ENDS HERE */
+
+
+
+
+/* THE STYLING FOR THE HOME PAGE STARTS HERE */
+
+.welcome-message {
+    width: 60%;
+    height: 10rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40rem;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+.welcome-message h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 5rem;
+    font-weight: lighter;
+    color: white;
+    text-shadow: 2px 3px 5px rgba(0,0,0,0.5);
+}
+
+/* THE STYLING FOR THE HOME PAGE STARTS HERE */
 
 
 
