@@ -58,7 +58,7 @@ class TodoInputForm extends React.Component {
                                     autoComplete="off"
                                 />
                                 <label htmlFor="todo-title-input" className="title-label"> 
-                                    <span className="title-span"> Title </span> 
+                                    <span className="title-span"> Title: </span> 
                                 </label>
                             </FormGroup>
                         </Col>
@@ -74,7 +74,7 @@ class TodoInputForm extends React.Component {
                                     autoComplete="off"
                                 /> 
                                 <label htmlFor="todo-description-input" className="description-label"> 
-                                    <span className="description-span"> Description </span>
+                                    <span className="description-span"> Description: </span>
                                 </label>
                             </FormGroup>
                             <Form.Group bsPrefix="add-todo-button-container">
