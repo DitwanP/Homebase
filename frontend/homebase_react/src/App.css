@@ -23,7 +23,6 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-color: turquoise;
 
     font-family: "Poppins", sans-serif;
     min-height: 100vh;
@@ -53,7 +52,7 @@ body {
 
 .logo-link:hover {
     text-decoration: none;
-    color: orangered;
+    color: rgb(235, 197, 128);
 }
 
 nav {
@@ -115,7 +114,7 @@ transition-property: transform, opacity;
 
 .hoverable:hover{
     transform: translateY(-5px);
-    color: orangered;
+    color: rgb(235, 197, 128);
     text-decoration: none;
 }
 .hoverable:hover::before, .hoverable:active:before, .hoverable:focus::before{
@@ -280,7 +279,7 @@ transform: translateY(-5px);
     height: 100%;
     left: 0rem;
     bottom: -0.1rem;
-    border-bottom: 0.2rem solid orangered;
+    border-bottom: 0.2rem solid rgb(235, 197, 128);
     transform: translateX(-100%);
     transition: transform 0.3s ease;
 }
@@ -303,14 +302,14 @@ transform: translateY(-5px);
 .todo-title-form input:valid + .title-label .title-span {
     transform: translateY(-80%);
     font-size: 1.6rem;
-    color: orangered;
+    color: rgb(235, 197, 128);
 }
 
 .todo-description-form input:focus + .description-label .description-span, 
 .todo-description-form input:valid + .description-label .description-span {
     transform: translateY(-80%);
     font-size: 1.6rem;
-    color: orangered;
+    color: rgb(235, 197, 128);
 }
 
 .todo-title-form input:focus + .title-label::after, 
@@ -344,7 +343,7 @@ transform: translateY(-5px);
 }
 
 .add-todo-button:hover{
-    color: orangered;
+    color: rgb(235, 197, 128);
 } 
 /* THE STYLING FOR THE TODO INPUT FORM ENDS HERE */
 
