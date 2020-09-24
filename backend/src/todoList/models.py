@@ -1,7 +1,6 @@
 from django.db import models
 import uuid 
 
-
 class toDo(models.Model):
     
     uuid = models.UUIDField(unique=True, default=uuid.uuid4, editable=False)
