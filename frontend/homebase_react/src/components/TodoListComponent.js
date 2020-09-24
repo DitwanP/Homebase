@@ -28,7 +28,7 @@ const TodoListComponent = ({todos, getTodos}) => {
   return ( 
     todos.map(todo => 
       <ul className="todo-list-ul" key={todo.id} value={todo.isComplete}>
-        <li className="todo-title" value={todo.isComplete}> {todo.title} </li>
+        <li className="todo-title" value={todo.isComplete}> {todo.title} - </li>
         <li className="todo-content" value={todo.isComplete}> {todo.content} </li>
         <button type="submit" className="todo-delete-btn" onClick={() => handleDelete(todo.id)}>
           <FontAwesomeIcon icon="trash-alt" />

@@ -34,7 +34,7 @@ body {
 .navbar-container {
     width: 100%;
     height: 8rem;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.6);
     position: fixed;
     top: 0rem;
     left: 0rem;
@@ -46,7 +46,7 @@ body {
     float: left;
     margin: 0.8rem 6.6rem;
     color: #fff;
-    font-weight: bold;
+    font-weight: normal;
     font-size: 20px;
     letter-spacing: 2px;
 }
@@ -131,21 +131,49 @@ transform: translateY(-5px);
 
 .welcome-message {
     width: 60%;
-    height: 10rem;
+    position: fixed;
+    left: 20%;
     justify-content: center;
     align-items: center;
-    margin-top: 40rem;
+    margin-top: 20rem;
     margin-right: auto;
     margin-left: auto;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 2rem;
 }
 
 .welcome-message h1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 5rem;
-    font-weight: lighter;
+    font-size: 2rem;
+    font-weight: bold;
+    font-style: italic;
+    text-transform: lowercase;
+    text-align: left;
+    letter-spacing: 0.2rem;
     color: white;
-    text-shadow: 2px 3px 5px rgba(0,0,0,0.5);
+}
+
+.welcome-message h2 {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 2rem;
+    font-weight: lighter;
+    font-style: italic;
+    text-align: left;
+    letter-spacing: 0.1rem;
+    color: white;
+
+}
+
+.welcome-message h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: lighter;
+    font-style: italic;
+    color: white;
+    text-align: right;
+    letter-spacing: 0.1rem;
 }
 
 /* THE STYLING FOR THE HOME PAGE STARTS HERE */
@@ -162,7 +190,7 @@ transform: translateY(-5px);
     margin-top: 15rem;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 2rem;
     border-radius: 2rem;
 }
@@ -180,18 +208,22 @@ transform: translateY(-5px);
 .todo-title-input {
     width: 100%;
     height: 100%;
+    padding-top: 1rem;
     border: none;
     color: white;
     background: none;
     outline: none;
+    font-family: Helvetica, sans-serif;
+    font-weight: lighter;
 }
 
 .todo-title-form label {
     font-family: 'Monterrat', sans-serif;
     font-weight: 500;
-    letter-spacing: 0.2rem;
+    font-style: italic;
+    letter-spacing: 0.3rem;
+    text-transform: lowercase;
     color: white;
-
     position: absolute;
     bottom: 0rem;
     left: 0rem;
@@ -215,19 +247,22 @@ transform: translateY(-5px);
 .todo-description-input {
     width: 100%;
     height: 100%;
-    padding-top: 2rem;
+    padding-top: 1rem;
     border: none;
     color: white;
     background: none;
     outline: none;
+    font-family: Helvetica, sans-serif;
+    font-weight: lighter;
 }
 
 .todo-description-form label {
     font-family: 'Monterrat', sans-serif;
     font-weight: 500;
-    letter-spacing: 0.2rem;
+    font-style: italic;
+    letter-spacing: 0.3rem;
+    text-transform: lowercase;
     color: white;
-
     position: absolute;
     bottom: 0rem;
     left: 0rem;
@@ -324,7 +359,7 @@ transform: translateY(-5px);
     align-items: center;
     width: 60%;
     margin: 2rem auto;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 2rem;
     border-radius: 2rem;
 }
@@ -342,10 +377,12 @@ transform: translateY(-5px);
 }
 
 .todo-title {
-    font-size: 2.4rem;
+    font-size: 2rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    text-transform: capitalize;
+    font-style: italic;
+    text-transform: lowercase;
+    letter-spacing: 0.2rem;
 }
 
 .todo-title[value="true"] {
@@ -354,16 +391,18 @@ transform: translateY(-5px);
 }
 
 .todo-content {
-    color: rgb(238, 238, 238);
+    color: rgb(255, 254, 254);
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.0rem;
-    font-weight: normal;
+    font-size: 1.8rem;
+    font-weight: lighter;
+    font-style: italic;
+    text-transform: lowercase;
     padding-bottom: 0.5rem;
 }
 
-.todo-content::first-letter {
+/* .todo-content::first-letter {
     text-transform: uppercase;
-}
+} */
 
 .todo-complete-btn {
     background: none;
