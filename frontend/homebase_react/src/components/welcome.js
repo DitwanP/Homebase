@@ -24,9 +24,9 @@ class welcome extends React.Component {
     render() {
         return(
             <Spring 
-                from={{ marginTop: -500}} 
-                to={{ marginTop: 350}}
-                config={{duration: 1000}}
+                from={{ opacity: 0}} 
+                to={{ opacity: 1}}
+                config={{duration: 1500}}
             >
                 {props => (
                     <div style={props} className="welcome-message">                      
