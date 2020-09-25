@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { Spring } from 'react-spring/renderprops';
+import { config } from '@fortawesome/fontawesome-svg-core';
 
 class welcome extends React.Component {
     state = {

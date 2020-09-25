@@ -44,9 +44,9 @@ class TodoInputForm extends React.Component {
     render() {
         return (
             <Spring 
-                from={{ marginTop: -500}} 
-                to={{ marginTop: 175}}
-                config={{ duration: 1000}}
+                from={{ opacity: 0 }} 
+                to={{ opacity: 1 }}
+                config={{ duration: 1500}}
             >
                 {props => ( 
                     // Bootsrap form group for the input of the todo data.
