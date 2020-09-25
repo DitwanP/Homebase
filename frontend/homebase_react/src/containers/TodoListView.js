@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import TodoListComponent from '../components/TodoListComponent';
+import { Spring } from 'react-spring/renderprops';
+
 
 class TodoListView extends React.Component {
 
@@ -22,9 +24,17 @@ componentDidMount(){
 
 render(){
     return ( 
-        <div className="todo-component-div">
-            <TodoListComponent todos={this.state.todoListData} getTodos={this.fetchTodos}/>
-        </div>
+        <Spring 
+            from={{ opacity: 0}} 
+            to={{ opacity: 1}}
+            config={{delay: 1250, duration: 1000}}
+        >
+            {props => (
+                <div style={props} className="todo-component-div">
+                    <TodoListComponent todos={this.state.todoListData} getTodos={this.fetchTodos}/>
+                </div>
+            )}
+        </Spring>
     );
 }
 };
