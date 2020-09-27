@@ -18,15 +18,36 @@ header {
 }
 
 body {
-    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('./static/boat-and-duck.jpg');
+    /* background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('./static/boat-and-duck.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: fixed; */
 
     font-family: "Poppins", sans-serif;
     min-height: 100vh;
 }
+
+/* THE STYLING FOR THE BG IMAGE STARTS HERE */
+
+.BgImage {
+    position: relative;
+    top: 0rem;
+    left: 0rem;
+    z-index: -1;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.BgImage img {
+    filter: brightness(70%);
+}
+
+/* THE STYLING FOR THE BG IMAGE ENDS HERE */
+
+
+
+
 
 
 /* THE STYLING FOR THE NAV BAR STARTS HERE */
@@ -132,10 +153,12 @@ transform: translateY(-5px);
     width: 60%;
     justify-content: center;
     align-items: center;
-    margin-top: 30rem;
     margin-right: auto;
     margin-left: auto;
     text-align: center;
+    position: absolute;
+    top: 30rem;
+    left: 20%;
     background-color: rgba(0, 0, 0, 0.7);
     padding: 2rem;
     border-radius: 2rem;
@@ -173,9 +196,11 @@ transform: translateY(-5px);
 .input-form-container {
     width: 60%;
     justify-content: center;
-    margin-top: 18rem;
     margin-left: auto;
     margin-right: auto;
+    position: absolute;
+    top: 20rem;
+    left: 20%;
     background-color: rgba(0, 0, 0, 0.7);
     padding: 2rem;
     border-radius: 2rem;
@@ -341,10 +366,12 @@ transform: translateY(-5px);
 
 /* THE STYLING FOR THE ENTIRE TODO LIST STARTS HERE */
 .todo-component-div {
+    position: absolute;
+    top: 40rem;
+    left: 20%;
     justify-content: center;
     align-items: center;
     width: 60%;
-    margin: 2rem auto;
     background-color: rgba(0, 0, 0, 0.7);
     padding: 2rem;
     border-radius: 2rem;
