@@ -15,13 +15,13 @@ const TodoListComponent = ({todos, getTodos}) => {
       isComplete: !todoToUpdate.isComplete
     }
 
-    axios.put(`http://127.0.0.1:8000/api/${todoToUpdate.id}/update/`, updated)
+    axios.put(`http://127.0.0.1:8000/api/todo/${todoToUpdate.id}/update/`, updated)
     .then(getTodos)
   }
 
   function handleDelete(idToDelete){
     console.log('delete button clicked')
-    axios.delete(`http://127.0.0.1:8000/api/${idToDelete}/delete/`)
+    axios.delete(`http://127.0.0.1:8000/api/todo/${idToDelete}/delete/`)
     .then(getTodos)
   };
 
