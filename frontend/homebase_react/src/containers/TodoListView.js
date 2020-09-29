@@ -9,7 +9,7 @@ state = {
 }
 
 fetchTodos = () => {
-    axios.get('http://127.0.0.1:8000/api/').then(response => {
+    axios.get('http://127.0.0.1:8000/api/todo').then(response => {
         this.setState({
             todoListData: response.data
         });
