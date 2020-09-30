@@ -1,25 +1,27 @@
 from rest_framework import viewsets
 from rest_framework.views import APIView
-from rest_framework.generics import (ListAPIView)
+from rest_framework.generics import (ListAPIView, CreateAPIView, DestroyAPIView, UpdateAPIView )
 
 from background.models import bgImage
 from .serializers import BackgroundSerializer
 import requests
 
 class BgViewSet(viewsets.ModelViewSet):
-
-    serializer_class = BackgroundSerializer
     queryset = bgImage.objects.all()
+    serializer_class = BackgroundSerializer
 
-class GetBgView(ListAPIView):
+class BgListView(ListAPIView):
+    queryset = bgImage.objects.all()
+    serializer_class = BackgroundSerializer
 
-    imagePath = '/Users/wanted/Documents/Coding/homebase/backend/src/background/images/bgImage.jpg'
+class BgCreateView(CreateAPIView):
+    queryset = bgImage.objects.all()
+    serializer_class = BackgroundSerializer
+    
+class BgUpdateView(UpdateAPIView):
+    queryset = bgImage.objects.all()
+    serializer_class = BackgroundSerializer
 
-    response = requests.get('https://source.unsplash.com/random/1920x1080')
-
-    if response.status_code == 200:
-        with open(imagePath, 'wb') as f:
-            f.write(response.content)
-
+class BgDeleteView(DestroyAPIView):
     queryset = bgImage.objects.all()
     serializer_class = BackgroundSerializer
