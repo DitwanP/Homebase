@@ -40,41 +40,9 @@ body {
 }
 
 .BgImage img {
-    filter: brightness(70%);
-}
-
-.button-container {
-    height: 3rem;
-    width: 3rem;
-    position: fixed;
-    right: 0rem;
-    bottom: 0rem;
-
-    text-align: center;
-}
-
-.wallpaper-button {
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    margin-top: .5rem;
-
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.6rem;
-    
-    background: none;
-    border: none;
-
-    cursor: pointer;
-}
-
-.wallpaper-button:hover {
-    color: rgb(235, 197, 128);
-}
-
-.wallpaper-button:focus {
-    outline: none;
-    box-shadow: none;
+    filter: brightness(80%);
+    height: 1080px;
+    width: 1920px;
 }
 
 /* THE STYLING FOR THE BG IMAGE ENDS HERE */
