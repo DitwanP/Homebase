@@ -1,6 +1,6 @@
 from rest_framework import viewsets
 from rest_framework.views import APIView
-from rest_framework.generics import (ListAPIView, CreateAPIView, DestroyAPIView, UpdateAPIView )
+from rest_framework.generics import (ListAPIView, RetrieveAPIView, CreateAPIView, DestroyAPIView, UpdateAPIView )
 
 from background.models import bgImage
 from .serializers import BackgroundSerializer
@@ -11,6 +11,10 @@ class BgViewSet(viewsets.ModelViewSet):
     serializer_class = BackgroundSerializer
 
 class BgListView(ListAPIView):
+    queryset = bgImage.objects.all()
+    serializer_class = BackgroundSerializer
+
+class BgSingleView(RetrieveAPIView):
     queryset = bgImage.objects.all()
     serializer_class = BackgroundSerializer
 

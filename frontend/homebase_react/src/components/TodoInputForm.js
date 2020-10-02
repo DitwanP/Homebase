@@ -36,7 +36,7 @@ class TodoInputForm extends React.Component {
         const currentTitle = this.state.title;
         const currentContent = this.state.content;
 
-        axios.post('http://127.0.0.1:8000/api/create/', { title: currentTitle, content: currentContent });
+        axios.post('http://127.0.0.1:8000/api/todo/create/', { title: currentTitle, content: currentContent });
 
         this.setState({ title: '', content: ''});
     }

@@ -5,12 +5,10 @@ import TodoInputForm from './components/TodoInputForm';
 import NavBar from './components/NavBar';
 import welcome from './components/welcome';
 import BgImage from './components/BgImage';
-
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faCheck, faTrashAlt, faPlus, faBars, faList} from '@fortawesome/free-solid-svg-icons'
-
-library.add(fab, faCheck, faTrashAlt, faPlus, faBars, faList)
+import { faCheck, faTrashAlt, faPlus, faBars, faList, faRedoAlt} from '@fortawesome/free-solid-svg-icons'
+library.add(fab, faCheck, faTrashAlt, faPlus, faBars, faList, faRedoAlt)
 
 class App extends Component {
 
