@@ -12,6 +12,7 @@ function BootstrapNavbar() {
                     <ul>
                         <li>
                             <a 
+                            title="Todos"
                             className="hoverable" 
                             href="./todo"  
                             rel="noopener noreferrer">
@@ -20,6 +21,7 @@ function BootstrapNavbar() {
                         </li>
                         <li>
                             <a 
+                            title="Reddit"
                             className="hoverable" 
                             href="https://reddit.com" 
                             target="_blank" 
@@ -29,6 +31,7 @@ function BootstrapNavbar() {
                         </li>
                         <li>
                             <a 
+                            title="YouTube"
                             className="hoverable" 
                             href="https://www.youtube.com" 
                             target="_blank" 
@@ -38,6 +41,7 @@ function BootstrapNavbar() {
                         </li>
                         <li>
                             <a 
+                            title="Twitch"
                             className="hoverable" 
                             href="https://www.twitch.tv" 
                             target="_blank" 
