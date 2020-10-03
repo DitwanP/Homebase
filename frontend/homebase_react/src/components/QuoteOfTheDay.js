@@ -2,14 +2,13 @@ import React from 'react';
 import axios from 'axios';
 import { Spring } from 'react-spring/renderprops';
 
-class welcome extends React.Component {
+class QuoteOfTheDay extends React.Component {
     state = {
         quoteData: []
     }
     
     fetchTodaysQuote = () => {
         axios.get('http://quotes.rest/qod?category=inspire&language=en').then(response => {
-            console.log(response.data.contents.quotes)
             this.setState({
                 quoteData: response.data.contents.quotes
             });
@@ -42,4 +41,4 @@ class welcome extends React.Component {
     }
 }
 
-export default welcome;
+export default QuoteOfTheDay;
