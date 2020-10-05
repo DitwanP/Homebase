@@ -12,15 +12,6 @@ function BootstrapNavbar() {
                     <ul>
                         <li>
                             <a 
-                            title="Todos"
-                            className="hoverable" 
-                            href="./todo"  
-                            rel="noopener noreferrer">
-                                <FontAwesomeIcon icon={['fas', 'list']} />
-                            </a>
-                        </li>
-                        <li>
-                            <a 
                             title="Reddit"
                             className="hoverable" 
                             href="https://reddit.com" 

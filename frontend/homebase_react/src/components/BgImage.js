@@ -5,7 +5,7 @@ export default class BgImage extends Component {
         return (
             <div>
                 <div className="BgImage">
-                    <img src='https://source.unsplash.com/1920x1080/daily' alt=''></img>
+                    <img src='https://source.unsplash.com/2560x1440/daily' alt=''></img>
                 </div>
             </div>
         )
