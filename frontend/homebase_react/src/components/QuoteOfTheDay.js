@@ -27,7 +27,7 @@ class QuoteOfTheDay extends React.Component {
                 config={{duration: 1500}}
             >
                 {props => (
-                    <div style={props} className="welcome-message">                      
+                    <div style={props} className="quote-of-the-day">                      
                         {this.state.quoteData.map( quote =>
                             <ul key={quote.id}>
                                 <h2>{quote.quote}</h2>
