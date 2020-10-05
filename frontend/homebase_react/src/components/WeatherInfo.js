@@ -25,7 +25,6 @@ class WeatherInfo extends React.Component {
     }
     
     fetchWeather = () => {
-        console.log(myApiKey)
         axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${myCity},${myCountry}&units=${units}&appid=${myApiKey}`).then(response => {
             this.setState({
                 weatherData: response.data,
