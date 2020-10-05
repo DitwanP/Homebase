@@ -150,7 +150,7 @@ transform: translateY(-5px);
 
 
 
-/* THE STYLING FOR THE HOME PAGE STARTS HERE */
+/* THE STYLING FOR THE QUOTE STARTS HERE */
 
 .welcome-message {
     width: 60%;
@@ -186,7 +186,119 @@ transform: translateY(-5px);
     margin-top: 2rem;
 }
 
-/* THE STYLING FOR THE HOME PAGE STARTS HERE */
+/* THE STYLING FOR THE QUOTE ENDS HERE */
+
+
+
+/* THE STYLING FOR THE WEATHER STARTS HERE */
+
+.weather {
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 40rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 2rem;
+    display: flex;
+}
+
+.location-and-time-container {
+    width: 30%;
+    height: 14rem;
+}
+
+.location-and-time-container h1 {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 3rem;
+    font-weight: normal;
+    font-style: normal;
+    text-align: left;
+    letter-spacing: 0.1rem;
+    margin-top: 2rem;
+    color: white;
+}
+
+.location-and-time-container h2 {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 2.2rem;
+    font-weight: lighter;
+    font-style: normal;
+    text-align: left;
+    letter-spacing: 0.1rem;
+    color: white;
+}
+
+.location-and-time-container h3 {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 2.2rem;
+    font-weight: lighter;
+    font-style: normal;
+    text-align: left;
+    color: white;
+    letter-spacing: 0.1rem;
+}
+
+.location-and-time-container h3::first-letter {
+    text-transform: uppercase;
+}
+
+.high-low-container {
+    width: 50%;
+    height: 14rem;
+    display: block;
+    margin-right: 7rem;
+}
+
+.high-low-container h1 {
+    height: 10rem;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 6rem;
+    font-weight: normal;
+    letter-spacing: 0.1rem;
+    color: white;
+    margin-left: 3.5rem;
+    margin-bottom: -3rem;
+    margin-top: 1.8rem;
+}
+
+.high-low-container h4 {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 2.2rem;
+    font-weight: lighter;
+    letter-spacing: 0.1rem;
+    color: white;
+}
+
+.high-low-container img {
+    width: 20%;
+    height: 90%;
+    position: relative;
+    right: 1rem;
+}
+
+.conditions-container {
+    width: 20%;
+    height: 14rem;
+    display: block;
+}
+
+.conditions-container h5 {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 2.2rem;
+    font-weight: lighter;
+    letter-spacing: 0.1rem;
+    color: white;
+    text-align: left;
+}
+
+.top-h5 {
+    margin-top: 2rem;
+}
+/* THE STYLING FOR THE WEATHER ENDS HERE */
 
 
 
