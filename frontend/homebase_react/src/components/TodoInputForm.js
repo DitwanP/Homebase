@@ -4,7 +4,6 @@ import { FormGroup, Form, Button, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Spring } from 'react-spring/renderprops';
 
-
 class TodoInputForm extends React.Component {
 
     constructor(props) {
@@ -33,12 +32,14 @@ class TodoInputForm extends React.Component {
     // This will tell the api to create a new todo with the given information 
     // from the title and content boxes.
     handleSubmit = (event) => {
+        event.preventDefault()
         const currentTitle = this.state.title;
         const currentContent = this.state.content;
 
         axios.post('http://127.0.0.1:8000/api/todo/create/', { title: currentTitle, content: currentContent });
-
-        this.setState({ title: '', content: ''});
+            
+        this.setState({ title: '', content: ''})
+        this.props.refreshTodos()
     }
 
     render() {

@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import TodoListComponent from '../components/TodoListComponent';
+import TodoInputForm from '../components/TodoInputForm';
 
 class TodoListView extends React.Component {
 
@@ -8,7 +9,7 @@ state = {
     todoListData: []
 }
 
-fetchTodos = () => {
+fetchTodos = (event) => {
     axios.get('http://127.0.0.1:8000/api/todo').then(response => {
         this.setState({
             todoListData: response.data
@@ -22,8 +23,13 @@ componentDidMount(){
 
 render(){
     return ( 
-        <div className="todo-component-div">
-            <TodoListComponent todos={this.state.todoListData} getTodos={this.fetchTodos}/>
+        <div>
+            <div>
+                <TodoInputForm refreshTodos={this.fetchTodos}/>
+            </div>
+            <div className="todo-component-div">
+                <TodoListComponent todos={this.state.todoListData} getTodos={this.fetchTodos}/>
+            </div>
         </div>
     );
 }

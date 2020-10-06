@@ -6,8 +6,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const TodoListComponent = ({todos, getTodos}) => {
 
   function handleComplete(todoToUpdate){
-    console.log('complete button clicked')
-
     const updated = {
       id: todoToUpdate.id,
       title: todoToUpdate.title,
@@ -20,7 +18,6 @@ const TodoListComponent = ({todos, getTodos}) => {
   }
 
   function handleDelete(idToDelete){
-    console.log('delete button clicked')
     axios.delete(`http://127.0.0.1:8000/api/todo/${idToDelete}/delete/`)
     .then(getTodos)
   };

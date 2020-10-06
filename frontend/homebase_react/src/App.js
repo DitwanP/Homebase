@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import  {BrowserRouter as Router} from 'react-router-dom';
 import TodoListView from './containers/TodoListView';
-import TodoInputForm from './components/TodoInputForm';
 import NavBar from './components/NavBar';
 import QuoteOfTheDay from './components/QuoteOfTheDay';
 import WeatherInfo from './components/WeatherInfo';
@@ -20,7 +19,6 @@ class App extends Component {
         <BgImage />
         <WeatherInfo />
         <QuoteOfTheDay />
-        <TodoInputForm />
         <TodoListView />
       </Router>
     );
