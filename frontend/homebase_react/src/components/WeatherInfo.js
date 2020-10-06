@@ -125,12 +125,12 @@ class WeatherInfo extends React.Component {
                                     {Math.round(this.state.currTemp)}°
                                     <img src={`http://openweathermap.org/img/wn/${this.state.icon}@2x.png`} alt=""/>
                                 </h1> 
-                                <h4>High: {Math.round(this.state.highTemp)}° Low: {Math.round(this.state.lowTemp)}°</h4>
+                                <h4>High - {Math.round(this.state.highTemp)}° | Low - {Math.round(this.state.lowTemp)}°</h4>
                             </div>
                             <div className="conditions-container">
-                                <h5 className="top-h5">Feels like: {Math.round(this.state.feelsLike)}°</h5>
-                                <h5>Humidity: {this.state.humidity}% </h5>
-                                <h5>Wind: {Math.round(this.state.wind)}mph </h5>
+                                <h5 className="top-h5">Feels like - {Math.round(this.state.feelsLike)}°</h5>
+                                <h5>Humidity - {this.state.humidity}% </h5>
+                                <h5>Wind - {Math.round(this.state.wind)}mph </h5>
                             </div>
                         </div>
                     </div>

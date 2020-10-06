@@ -58,6 +58,7 @@ body {
 }
 
 .logo-link {
+    font-family: 'Montserrat', sans-serif;
     line-height: 60px;
     position: fixed;
     float: left;
@@ -65,7 +66,7 @@ body {
     color: #fff;
     font-weight: normal;
     font-size: 2.2rem;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
 }
 
 .logo-link:hover {
@@ -160,10 +161,10 @@ transform: translateY(-5px);
 }
 
 .quote-of-the-day h2 {
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 2.6rem;
     font-weight: lighter;
-    font-style: italic;
+    font-style: normal;
     text-align: left;
     letter-spacing: 0.1rem;
     color: white;
@@ -173,7 +174,7 @@ transform: translateY(-5px);
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
     font-weight: normal;
-    font-style: normal;
+    font-style: italic;
     color: white;
     text-align: right;
     letter-spacing: 0.1rem;
@@ -224,10 +225,10 @@ transform: translateY(-5px);
 }
 
 .city-form label {
-    font-family: 'Helvetica', sans-serif;
-    font-weight: lighter;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
     font-style: normal;
-    letter-spacing: 0.3rem;
+    letter-spacing: 0rem;
     color: white;
     position: absolute;
     bottom: 0rem;
@@ -322,18 +323,18 @@ transform: translateY(-5px);
 }
 
 .location-and-time-container h1 {
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 3rem;
     font-weight: normal;
     font-style: normal;
     text-align: left;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0rem;
     margin-top: 2rem;
     color: white;
 }
 
 .location-and-time-container h2 {
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 2.2rem;
     font-weight: lighter;
     font-style: normal;
@@ -343,7 +344,7 @@ transform: translateY(-5px);
 }
 
 .location-and-time-container h3 {
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 2.2rem;
     font-weight: lighter;
     font-style: normal;
@@ -365,19 +366,19 @@ transform: translateY(-5px);
 
 .high-low-container h1 {
     height: 10rem;
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 6rem;
     font-weight: normal;
     letter-spacing: 0.1rem;
     color: white;
     margin-left: 3.5rem;
-    margin-bottom: -3rem;
+    margin-bottom: -2rem;
     margin-top: 1.8rem;
 }
 
 .high-low-container h4 {
-    font-family: 'Helvetica', sans-serif;
-    font-size: 2.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
     font-weight: lighter;
     letter-spacing: 0.1rem;
     color: white;
@@ -397,16 +398,16 @@ transform: translateY(-5px);
 }
 
 .conditions-container h5 {
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 2.2rem;
     font-weight: lighter;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0rem;
     color: white;
     text-align: left;
 }
 
 .top-h5 {
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 /* THE STYLING FOR THE WEATHER ENDS HERE */
 
@@ -578,6 +579,12 @@ transform: translateY(-5px);
 .add-todo-button:hover{
     color: rgb(235, 197, 128);
 } 
+
+.add-todo-button:focus{
+    background: none;
+    border: none;
+    outline: none;
+}
 /* THE STYLING FOR THE TODO INPUT FORM ENDS HERE */
 
 
@@ -665,6 +672,13 @@ transform: translateY(-5px);
 
 .todo-delete-btn:hover {
     color: rgb(250, 47, 47);
+}
+
+.todo-complete-btn:focus,
+.todo-delete-btn:focus {
+    background: none;
+    border: none;
+    outline: none;
 }
 
 .divider {
