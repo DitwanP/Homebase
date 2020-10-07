@@ -1,7 +1,7 @@
 import React from "react";
 import axios from 'axios';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Transition } from 'react-spring/renderprops';
 
 const TodoListComponent = ({todos, getTodos}) => {
 
@@ -23,19 +23,24 @@ const TodoListComponent = ({todos, getTodos}) => {
   };
 
   return ( 
-    todos.map(todo => 
-      <ul className="todo-list-ul" key={todo.id} value={todo.isComplete}>
-        <li className="todo-title" value={todo.isComplete}> {todo.title} - </li>
-        <li className="todo-content" value={todo.isComplete}> {todo.content} </li>
-        <button type="submit" className="todo-delete-btn" onClick={() => handleDelete(todo.id)}>
-          <FontAwesomeIcon icon="trash-alt" />
-        </button>
-        <button value={todo.isComplete} className="todo-complete-btn" onClick={() => handleComplete(todo)}>
-          <FontAwesomeIcon icon="check" />
-        </button>
-        <li className="divider"></li>
-      </ul>
-    )
+    <Transition
+    items={todos} keys={todo => todo.id}
+    from={{ transform: 'translate3d(-1000px,0,0)' }}
+    enter={{ transform: 'translate3d(0px,0,0)' }}
+    leave={{ transform: 'translate3d(0,0,0)' }}>
+        {todo => props =>
+          <div className="todo-component-div" style={props} value={todo.isComplete}>
+            <h1 className="todo-title" value={todo.isComplete}> {todo.title} - </h1>
+            <h2 className="todo-content" value={todo.isComplete}> {todo.content} </h2>
+            <button type="submit" className="todo-delete-btn" onClick={() => handleDelete(todo.id)}>
+              <FontAwesomeIcon icon="trash-alt" />
+            </button>
+            <button value={todo.isComplete} className="todo-complete-btn" onClick={() => handleComplete(todo)}>
+              <FontAwesomeIcon icon="check" />
+            </button>
+          </div>
+        }
+    </Transition>
   )
 };
 

@@ -27,7 +27,7 @@ render(){
             <div>
                 <TodoInputForm refreshTodos={this.fetchTodos}/>
             </div>
-            <div className="todo-component-div">
+            <div className="todo-list-div">
                 <TodoListComponent todos={this.state.todoListData} getTodos={this.fetchTodos}/>
             </div>
         </div>
