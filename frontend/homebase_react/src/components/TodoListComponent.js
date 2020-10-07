@@ -25,9 +25,9 @@ const TodoListComponent = ({todos, getTodos}) => {
   return ( 
     <Transition
     items={todos} keys={todo => todo.id}
-    from={{ transform: 'translate3d(-1000px,0,0)' }}
+    from={{ transform: 'translate3d(-1500px,0,0)' }}
     enter={{ transform: 'translate3d(0px,0,0)' }}
-    leave={{ transform: 'translate3d(0,0,0)' }}>
+    leave={{ transform: 'translate3d(1500px,0,0)' }}>
         {todo => props =>
           <div className="todo-component-div" style={props} value={todo.isComplete}>
             <h1 className="todo-title" value={todo.isComplete}> {todo.title} - </h1>

@@ -20,12 +20,13 @@ header {
 body {
     font-family: "Poppins", sans-serif;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 /* THE STYLING FOR THE BG IMAGE STARTS HERE */
 
 .BgImage {
-    position: fixed;
+    position: absolute;
     top: 0rem;
     left: 0rem;
     z-index: -1;
@@ -35,11 +36,62 @@ body {
 }
 
 .BgImage img {
-    filter: brightness(80%);
-    height: 1080px;
-    width: 1920px;
+    filter: brightness(50%);
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
 }
 
+.BgImage2 {
+    position: absolute;
+    top: 100%;
+    left: 0rem;
+    z-index: -1;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: teal;
+}
+
+.BgImage2 img {
+    filter: brightness(50%);
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.go-to-todolist-button {
+    position: absolute;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 4rem;
+    z-index: 0;
+    right: 1.5rem;
+    top: 86rem;
+}
+
+.go-to-todolist-button:focus {
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.go-to-top-button {
+    position: absolute;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 4rem;
+    z-index: 0;
+    right: 1.5rem;
+    top: 93rem;
+}
+
+.go-to-top-button:focus {
+    background: none;
+    border: none;
+    outline: none;
+}
 /* THE STYLING FOR THE BG IMAGE ENDS HERE */
 
 
@@ -48,68 +100,13 @@ body {
 
 
 /* THE STYLING FOR THE NAV BAR STARTS HERE */
-.navbar-container {
-    width: 100%;
-    height: 8rem;
-    background-color: rgba(0, 0, 0, 0.7);
-    position: fixed;
-    top: 0rem;
-    left: 0rem;
-}
-
-.logo-link {
-    font-family: 'Montserrat', sans-serif;
-    line-height: 60px;
-    position: fixed;
-    float: left;
-    margin: 0.7rem 6.6rem;
-    color: #fff;
-    font-weight: normal;
-    font-size: 2.2rem;
-    letter-spacing: 3px;
-}
-
-.logo-link:hover {
-    text-decoration: none;
-    color: rgb(235, 197, 128);
-}
-
-nav {
-    position: fixed;
-    width: 100%;
-    line-height: 60px;
-}
-
-nav ul {
-    line-height: 6rem;
-    list-style: none;
-    overflow: hidden;
-    color: #fff;
-    text-align: right;
-    margin: 0.7rem 7.6rem;
-    transition: 1s;
-}
-
-nav.black ul {
-    background: #000;
-}
-
-nav ul li {
-    display: inline-block;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 2.6rem;
-    margin-left: 2rem;
-}
 
 .hoverable{
     display:inline-block;
     backface-visibility: hidden;
     vertical-align: middle;
-    position:relative;
+    position: relative;
+    bottom: 1rem;
     box-shadow: 0 0 1px rgba(0,0,0,0);
     color: white;
     transform: translateZ(0);
@@ -416,7 +413,7 @@ transform: translateY(-5px);
 .input-form-container {
     width: 60%;
     justify-content: center;
-    margin-top: 60rem;
+    margin-top: 50rem;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2rem;

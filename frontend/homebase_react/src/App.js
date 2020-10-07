@@ -7,11 +7,19 @@ import WeatherInfo from './components/WeatherInfo';
 import BgImage from './components/BgImage';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faCheck, faTrashAlt, faPlus, faBars, faList, faRedoAlt} from '@fortawesome/free-solid-svg-icons'
-library.add(fab, faCheck, faTrashAlt, faPlus, faBars, faList, faRedoAlt)
+import { 
+  faCheck, 
+  faTrashAlt, 
+  faPlus, 
+  faBars, 
+  faList, 
+  faRedoAlt,
+  faChevronDown,
+  faChevronUp, } from '@fortawesome/free-solid-svg-icons'
+
+library.add(fab, faCheck, faTrashAlt, faPlus, faBars, faList, faRedoAlt, faChevronUp, faChevronDown)
 
 class App extends Component {
-
   render(){
     return (
       <Router>
