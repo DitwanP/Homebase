@@ -21,6 +21,7 @@ body {
     font-family: "Poppins", sans-serif;
     min-height: 100vh;
     overflow-x: hidden;
+
 }
 
 /* THE STYLING FOR THE BG IMAGE STARTS HERE */
@@ -68,12 +69,15 @@ body {
     z-index: 0;
     right: 1.5rem;
     top: 86rem;
+    opacity: 100%;
+    transition: opacity .8s;
 }
 
 .go-to-todolist-button:focus {
     background: none;
     border: none;
     outline: none;
+    opacity: 0%;
 }
 
 .go-to-top-button {
@@ -85,12 +89,15 @@ body {
     z-index: 0;
     right: 1.5rem;
     top: 93rem;
+    opacity: 100%;
+    transition: opacity .8s;
 }
 
 .go-to-top-button:focus {
     background: none;
     border: none;
     outline: none;
+    opacity: 0%;
 }
 /* THE STYLING FOR THE BG IMAGE ENDS HERE */
 
@@ -412,13 +419,12 @@ transform: translateY(-5px);
 .input-form-container {
     width: 60%;
     justify-content: center;
-    margin-top: 50rem;
+    margin-top: 40rem;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2rem;
     background-color: rgba(0, 0, 0, 0.7);
     padding: 2rem;
-
 }
 
 .todo-title-form {
