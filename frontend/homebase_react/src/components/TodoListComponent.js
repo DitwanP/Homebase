@@ -23,24 +23,26 @@ const TodoListComponent = ({todos, getTodos}) => {
   };
 
   return ( 
-    <Transition
-    items={todos} keys={todo => todo.id}
-    from={{ transform: 'translate3d(-1500px,0,0)' }}
-    enter={{ transform: 'translate3d(0px,0,0)' }}
-    leave={{ transform: 'translate3d(1500px,0,0)' }}>
-        {todo => props =>
-          <div className="todo-component-div" style={props} value={todo.isComplete}>
-            <h1 className="todo-title" value={todo.isComplete}> {todo.title} - </h1>
-            <h2 className="todo-content" value={todo.isComplete}> {todo.content} </h2>
-            <button type="submit" className="todo-delete-btn" onClick={() => handleDelete(todo.id)}>
-              <FontAwesomeIcon icon="trash-alt" />
-            </button>
-            <button value={todo.isComplete} className="todo-complete-btn" onClick={() => handleComplete(todo)}>
-              <FontAwesomeIcon icon="check" />
-            </button>
-          </div>
-        }
-    </Transition>
+    <div className="scrollable-div">
+      <Transition
+      items={todos} keys={todo => todo.id}
+      from={{ transform: 'translate3d(-1500px,0,0)' }}
+      enter={{ transform: 'translate3d(0px,0,0)' }}
+      leave={{ transform: 'translate3d(1500px,0,0)' }}>
+          {todo => props =>
+            <div className="todo-component-div" style={props} value={todo.isComplete}>
+              <h1 className="todo-title" value={todo.isComplete}> {todo.title} - </h1>
+              <h2 className="todo-content" value={todo.isComplete}> {todo.content} </h2>
+              <button type="submit" className="todo-delete-btn" onClick={() => handleDelete(todo.id)}>
+                <FontAwesomeIcon icon="trash-alt" />
+              </button>
+              <button value={todo.isComplete} className="todo-complete-btn" onClick={() => handleComplete(todo)}>
+                <FontAwesomeIcon icon="check" />
+              </button>
+            </div>
+          }
+      </Transition>
+    </div>
   )
 };
 
