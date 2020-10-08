@@ -16,7 +16,7 @@ export default class BgImage extends Component {
                     <FontAwesomeIcon icon="chevron-up" />
                 </button>
                 <div className="BgImage2">
-                    <img src='https://source.unsplash.com/1920x1080/daily?mountain' alt=''></img>
+                    <img src='https://source.unsplash.com/1920x1080/daily?nature' alt=''></img>
                 </div>
             </div>
         )

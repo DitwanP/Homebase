@@ -170,6 +170,8 @@ transform: translateY(-5px);
     padding-top: 2rem;
     display: flex;
     flex-direction: column;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
 }
 
 .city-form {
@@ -438,6 +440,8 @@ transform: translateY(-5px);
     position: absolute;
     left: 37.5rem;
     top: 60rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
 }
 
 .todo-title-form {
