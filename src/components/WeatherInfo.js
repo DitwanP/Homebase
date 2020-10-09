@@ -2,17 +2,17 @@ import React from "react";
 import axios from "axios";
 import { Spring } from "react-spring/renderprops";
 import moment from "moment";
-import { configInfo } from "../config";
 import { FormGroup, Form, Button, Col } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const myApiKey = configInfo.MY_KEY;
+const myApiKey = process.env.REACT_APP_WEATHER_API_KEY;
 const myDefaultCity = "Coral Springs";
 const myDefaultCountry = "US";
 const units = "imperial";
 var timeAndDay = moment().format("dddd h:00a");
 
 class WeatherInfo extends React.Component {
+
   // Initialize state
   state = {
     defaultCity: myDefaultCity,
@@ -32,22 +32,19 @@ class WeatherInfo extends React.Component {
 
   // This will get the weather information from the Openweathermap api.
   fetchWeather = (city, country) => {
-    axios
-      .get(
-        `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=${units}&appid=${myApiKey}`
-      )
+      axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=${units}&appid=${myApiKey}`)
       .then((response) => {
-        this.setState({
-          weatherData: response.data,
-          currTemp: response.data.main.temp,
-          highTemp: response.data.main.temp_max,
-          lowTemp: response.data.main.temp_min,
-          feelsLike: response.data.main.feels_like,
-          humidity: response.data.main.humidity,
-          wind: response.data.wind.speed,
-          description: response.data.weather[0].description,
-          icon: response.data.weather[0].icon,
-        });
+          this.setState({
+            weatherData: response.data,
+            currTemp: response.data.main.temp,
+            highTemp: response.data.main.temp_max,
+            lowTemp: response.data.main.temp_min,
+            feelsLike: response.data.main.feels_like,
+            humidity: response.data.main.humidity,
+            wind: response.data.wind.speed,
+            description: response.data.weather[0].description,
+            icon: response.data.weather[0].icon,
+          });
       });
   };
 
