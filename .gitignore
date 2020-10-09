@@ -30,6 +30,7 @@ db.sqlite3
 homebase/secrets.py
 .DS_Store
 .env
+/homebase/secret_key.txt
 */settings/local.py
 /staticfiles/*
 /mediafiles/*
