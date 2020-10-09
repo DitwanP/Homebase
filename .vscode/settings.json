@@ -1,7 +1,6 @@
 {
     "workbench.settings.useSplitJSON": true,
     "python.pythonPath": "python",
-    "editor.formatOnSave": true,
     "python.linting.pycodestyleEnabled": true,
     "python.linting.pylintPath": "pylint",
     "python.linting.pylintArgs": [

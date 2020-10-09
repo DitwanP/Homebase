@@ -7,7 +7,7 @@ export default class BgImage extends Component {
         return (
             <div>
                 <div className="BgImage">
-                    <img src='https://source.unsplash.com/1920x1080/daily?city' alt=''></img>
+                    <img src='https://source.unsplash.com/1920x1080/daily?wallpapers' alt=''></img>
                 </div>
                 <button className="go-to-todolist-button" onClick={() => scroll.scrollToBottom()}>
                     <FontAwesomeIcon icon="chevron-down" />

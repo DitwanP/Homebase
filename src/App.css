@@ -163,7 +163,7 @@ transform: translateY(-5px);
     height: 7rem;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 27rem;
+    margin-top: 22rem;
     background-color: rgba(0, 0, 0, 0.7);
     padding-left: 2rem;
     padding-right: 2rem;
@@ -431,6 +431,7 @@ transform: translateY(-5px);
 .input-form-container {
     width: 60%;
     justify-content: center;
+    align-items: center;
     margin-top: 40rem;
     margin-left: auto;
     margin-right: auto;
@@ -438,8 +439,9 @@ transform: translateY(-5px);
     background-color: rgba(0, 0, 0, 0.7);
     padding: 2rem;
     position: absolute;
-    left: 37.5rem;
+    left: 50%;
     top: 60rem;
+    transform: translateX(-50%);
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
 }
@@ -620,7 +622,8 @@ transform: translateY(-5px);
     overflow-x: hidden;
     position: absolute;
     top: 120rem;
-    left: 37.5rem;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .todo-component-div {
