@@ -16,6 +16,9 @@ six==1.15.0
 urllib3==1.25.10
 virtualenv==16.7.9
 wrapt==1.12.1
-django>=3.1.1
+django==3.1.1
 gunicorn==19.7.1
 whitenoise==3.3.1
+django-cors-headers==3.5.0
+djangorestframework==3.11.1
+pytz==2020.1
