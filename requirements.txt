@@ -15,7 +15,7 @@ django-environ==0.4.5
 djangorestframework==3.12.1
 enum34==1.1.10
 filelock==3.0.12
-gunicorn==19.7.1
+gunicorn==20.0.4
 idna==2.10
 isort==5.4.2
 lazy-object-proxy==1.4.3
