@@ -1,4 +1,3 @@
-from pathlib import Path
 import os
 import environ
 environ.Env.read_env()
