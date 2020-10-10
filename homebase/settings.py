@@ -1,5 +1,6 @@
 import os
 import environ
+import django_heroku
 environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -16,6 +17,7 @@ ALLOWED_HOSTS = ['homebase-rd.herokuapp.com', '127.0.0.1:8000']
 
 # Application definition
 INSTALLED_APPS = [
+    'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -62,8 +64,12 @@ TEMPLATES = [
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'do9onb118sf8e',
+        'HOST': 'ec2-34-233-43-35.compute-1.amazonaws.com',
+        'PORT': 5432,
+        'USER': 'mkmzxjoeweencd',
+        'PASSWORD': 'a74625ec6e4eb0a9a87ee6c12b1f362222ee068071a6c02af1daca6da3f63749',
     }
 }
 
@@ -100,11 +106,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+# Configure app for Heroku deployment
+django_heroku.settings(locals())
+
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'build/static')]
-
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'build', 'static')
+STATICFILES_DIRS = []
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 REST_FRAMEWORK = {
