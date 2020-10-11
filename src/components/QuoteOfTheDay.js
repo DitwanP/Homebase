@@ -8,7 +8,7 @@ class QuoteOfTheDay extends React.Component {
     }
     
     fetchTodaysQuote = () => {
-        axios.get('http://quotes.rest/qod?category=inspire&language=en').then(response => {
+        axios.get('https://quotes.rest/qod?category=inspire&language=en').then(response => {
             this.setState({
                 quoteData: response.data.contents.quotes
             });
