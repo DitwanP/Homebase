@@ -30,8 +30,10 @@ class QuoteOfTheDay extends React.Component {
                     <div style={props} className="quote-of-the-day">                      
                         {this.state.quoteData.map( quote =>
                             <ul key={quote.id}>
-                                <h2>{quote.quote}</h2>
-                                <h3> Author - {quote.author ? quote.author : 'Somebody'}</h3>
+                                <li>
+                                    <h2>{quote.quote}</h2>
+                                    <h3> Author - {quote.author ? quote.author : 'Somebody'}</h3>
+                                </li>
                             </ul>
                         )}
                     </div>

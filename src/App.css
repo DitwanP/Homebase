@@ -20,14 +20,15 @@ header {
 body {
     font-family: "Poppins", sans-serif;
     min-height: 100vh;
-    overflow: hidden;
+    overflow: overlay;
+    overflow-x: hidden;
 }
 
 *::-webkit-scrollbar {
     width: 8px;
 }
 *::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0);
 }
 *::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0.7);
@@ -41,15 +42,16 @@ body {
     top: 0rem;
     left: 0rem;
     z-index: -1;
-    min-height: 100vh;
+    height: 1080px;
+    width: 1920px;
     overflow-x: hidden;
-    background-color: teal;
+    background-color: black;
 }
 
 .BgImage img {
     filter: brightness(50%);
-    height: 100%;
-    width: 100%;
+    height: 1080px;
+    width: 1920px;
     overflow-x: hidden;
 }
 
@@ -58,15 +60,16 @@ body {
     top: 100%;
     left: 0rem;
     z-index: -1;
-    min-height: 100vh;
+    height: 1080px;
+    width: 1920px;
     overflow-x: hidden;
-    background-color: teal;
+    background-color: black;
 }
 
 .BgImage2 img {
     filter: brightness(50%);
-    height: 100%;
-    width: 100%;
+    height: 1080px;
+    width: 1920px;
     overflow-x: hidden;
 }
 
@@ -78,16 +81,21 @@ body {
     font-size: 4rem;
     z-index: 0;
     right: 1.5rem;
-    top: 86rem;
+    top: 89rem;
     opacity: 100%;
-    transition: opacity .8s;
+    transition: opacity 1s;
 }
 
 .go-to-todolist-button:focus {
     background: none;
     border: none;
     outline: none;
-    opacity: 0%;
+    opacity: 40%;
+}
+
+.go-to-todolist-button:hover {
+    background: none;
+    color: rgb(235, 197, 128);
 }
 
 .go-to-top-button {
@@ -98,20 +106,23 @@ body {
     font-size: 4rem;
     z-index: 5000;
     right: 1.5rem;
-    top: 94rem;
+    top: 108rem;
     opacity: 100%;
-    transition: opacity .8s;
+    transition: opacity 1s;
 }
 
 .go-to-top-button:focus {
     background: none;
     border: none;
     outline: none;
-    opacity: 0%;
+    opacity: 40%;
+}
+
+.go-to-top-button:hover {
+    background: none;
+    color: rgb(235, 197, 128);
 }
 /* THE STYLING FOR THE BG IMAGE ENDS HERE */
-
-
 
 
 
@@ -131,17 +142,17 @@ body {
 }
 
 .hoverable::before{
-position:absolute;
-pointer-events: none;
-z-index:-1;
-content: '';
-top: 100%;
-left: 5%;
-height:10px;
-width:90%;
-opacity:0;
-transition-duration: 0.3s;
-transition-property: transform, opacity;
+    position:absolute;
+    pointer-events: none;
+    z-index:-1;
+    content: '';
+    top: 100%;
+    left: 5%;
+    height:10px;
+    width:90%;
+    opacity:0;
+    transition-duration: 0.3s;
+    transition-property: transform, opacity;
 }
 
 .hoverable:hover{
@@ -357,10 +368,11 @@ transform: translateY(-5px);
 }
 
 .high-low-container img {
-    width: 20%;
-    height: 90%;
+    width: 100px;
+    height: 100px;
     position: relative;
     right: 1rem;
+    bottom: 0.5rem;
 }
 
 .conditions-container {
@@ -421,6 +433,10 @@ transform: translateY(-5px);
     margin-top: 2rem;
 }
 
+.quote-of-the-day ul li {
+    list-style: none;
+}
+
 /* THE STYLING FOR THE QUOTE ENDS HERE */
 
 
@@ -432,7 +448,7 @@ transform: translateY(-5px);
     width: 60%;
     justify-content: center;
     align-items: center;
-    margin-top: 40rem;
+    margin-top: 55rem;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2rem;
@@ -440,7 +456,7 @@ transform: translateY(-5px);
     padding: 2rem;
     position: absolute;
     left: 50%;
-    top: 60rem;
+    top: 61rem;
     transform: translateX(-50%);
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
@@ -469,7 +485,7 @@ transform: translateY(-5px);
 }
 
 .todo-title-form label {
-    font-family: 'Monterrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-style: normal;
     letter-spacing: 0.3rem;
@@ -508,7 +524,7 @@ transform: translateY(-5px);
 }
 
 .todo-description-form label {
-    font-family: 'Monterrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-style: normal;
     letter-spacing: 0.3rem;
@@ -582,11 +598,7 @@ transform: translateY(-5px);
 }
 
 .add-todo-button{
-    font-family: 'Monterrat', sans-serif;
-    font-weight: 500;
-    letter-spacing: 0.2rem;
     font-size: 1.9rem;
-
     background: none;
     color: white;
     border: none;
@@ -621,7 +633,7 @@ transform: translateY(-5px);
     overflow-y: auto;
     overflow-x: hidden;
     position: absolute;
-    top: 120rem;
+    top: 137rem;
     left: 50%;
     transform: translateX(-50%);
 }

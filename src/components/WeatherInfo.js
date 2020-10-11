@@ -9,6 +9,7 @@ const myApiKey = process.env.REACT_APP_WEATHER_API_KEY;
 const myDefaultCity = "Coral Springs";
 const myDefaultCountry = "US";
 const units = "imperial";
+const defaultWeatherIcon = "50d"
 var timeAndDay = moment().format("dddd h:00a");
 
 class WeatherInfo extends React.Component {
@@ -27,7 +28,7 @@ class WeatherInfo extends React.Component {
     wind: 0.0,
     curTime: timeAndDay,
     conditions: "",
-    icon: "",
+    icon: defaultWeatherIcon,
   };
 
   // This will get the weather information from the Openweathermap api.
@@ -88,6 +89,7 @@ class WeatherInfo extends React.Component {
                       <input
                         as="input"
                         className="city-input"
+                        label="city name"
                         type="title"
                         size="sm"
                         onChange={this.handleCityNameChange}

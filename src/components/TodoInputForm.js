@@ -42,6 +42,10 @@ class TodoInputForm extends React.Component {
         this.props.refreshTodos()
     }
 
+    componentDidMount() {
+        this.props.refreshTodos();
+    }
+
     render() {
         return (
             <Spring 
@@ -58,6 +62,7 @@ class TodoInputForm extends React.Component {
                                         <input 
                                             as="input" 
                                             className="todo-title-input"
+                                            label="todo title"
                                             type="title"
                                             size="sm" 
                                             onChange={this.handleTitleChange}
@@ -76,6 +81,7 @@ class TodoInputForm extends React.Component {
                                     <FormGroup bsPrefix="todo-description-form">
                                         <input 
                                             className="todo-description-input"
+                                            label="todo description"
                                             onChange={this.handleContentChange} 
                                             value={this.state.content} 
                                             required
@@ -90,7 +96,8 @@ class TodoInputForm extends React.Component {
                                             type="submit"
                                             variant="primary" 
                                             onClick={this.handleSubmit} 
-                                            bsPrefix='add-todo-button'> 
+                                            bsPrefix='add-todo-button'
+                                            aria-label="add to todo list"> 
                                             <FontAwesomeIcon icon="plus"/>
                                         </Button>
                                     </Form.Group>
