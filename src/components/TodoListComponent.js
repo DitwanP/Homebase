@@ -13,12 +13,12 @@ const TodoListComponent = ({todos, getTodos}) => {
       isComplete: !todoToUpdate.isComplete
     }
 
-    axios.put(`http://127.0.0.1:8000/api/todo/${todoToUpdate.id}/update/`, updated)
+    axios.put(`https://homebase-rd.herokuapp.com/api/todo/${todoToUpdate.id}/update/`, updated)
     .then(getTodos)
   }
 
   function handleDelete(idToDelete){
-    axios.delete(`http://127.0.0.1:8000/api/todo/${idToDelete}/delete/`)
+    axios.delete(`https://homebase-rd.herokuapp.com/api/todo/${idToDelete}/delete/`)
     .then(getTodos)
   };
 
