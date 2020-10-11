@@ -129,7 +129,7 @@ class WeatherInfo extends React.Component {
                 <h1>
                   {Math.round(this.state.currTemp)}°
                   <img
-                    src={`http://openweathermap.org/img/wn/${this.state.icon}@2x.png`}
+                    src={`https://openweathermap.org/img/wn/${this.state.icon}@2x.png`}
                     alt=""
                   />
                 </h1>
