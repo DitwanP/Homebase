@@ -10,7 +10,7 @@ export default class BgImage extends Component {
         return (
             <div>
                 <div className="BgImage">
-                    <img src={`https://source.unsplash.com/${windowWidth}x${windowHeight}/daily?wallpapers`} alt=''></img>
+                    <img src={`https://source.unsplash.com/${windowWidth}x${windowHeight}/daily?fall`} alt=''></img>
                 </div>
                 <button className="go-to-todolist-button" onClick={() => scroll.scrollToBottom()} aria-label="scroll to bottom of page">
                     <FontAwesomeIcon icon={['fas', 'chevron-down']} />
@@ -19,7 +19,7 @@ export default class BgImage extends Component {
                     <FontAwesomeIcon icon={['fas', 'chevron-up']} />
                 </button>
                 <div className="BgImage2">
-                    <img src='https://source.unsplash.com/1920x1080/daily?nature' alt=''></img>
+                    <img src={`https://source.unsplash.com/${windowWidth}x${windowHeight}/daily?nature`} alt=''></img>
                 </div>
             </div>
         )
