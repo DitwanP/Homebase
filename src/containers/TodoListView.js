@@ -10,7 +10,7 @@ state = {
 }
 
 fetchTodos = (event) => {
-    axios.get('http://127.0.0.1:8000/api/todo').then(response => {
+    axios.get('https://homebase-rd.herokuapp.com/api/todo').then(response => {
         this.setState({
             todoListData: response.data
         });
