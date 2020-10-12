@@ -1,6 +1,6 @@
 {
-    "name": "homebase",
     "short_name": "hb",
+    "name": "homebase",
     "icons": [
         {
             "src": "favicon.ico",
