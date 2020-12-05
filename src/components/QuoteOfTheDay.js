@@ -4,14 +4,29 @@ import { Spring } from 'react-spring/renderprops';
 
 class QuoteOfTheDay extends React.Component {
     state = {
-        quoteData: []
+        quote: '',
+        author: '',
     }
     
     fetchTodaysQuote = () => {
-        axios.get('https://quotes.rest/qod?category=inspire&language=en').then(response => {
+        axios.get('https://quotes.rest/qod?category=inspire&language=en')
+        .then(response => {
+            // Success
             this.setState({
-                quoteData: response.data.contents.quotes
+                quote: response.data.contents.quotes[0].quote,
+                author: response.data.contents.quotes[0].author,
             });
+            console.log(response.data)
+        })
+        .catch((error) => {
+            // Error
+            if (error.response) {
+                this.setState({
+                    quote: "Sorry there's no quote at the moment :(",
+                    author: 'nobody',
+                });
+            }
+            console.log(error.config);
         });
     }
 
@@ -28,14 +43,8 @@ class QuoteOfTheDay extends React.Component {
             >
                 {props => (
                     <div style={props} className="quote-of-the-day">                      
-                        {this.state.quoteData.map( quote =>
-                            <ul key={quote.id}>
-                                <li>
-                                    <h2>{quote.quote}</h2>
-                                    <h3> Author - {quote.author ? quote.author : 'Somebody'}</h3>
-                                </li>
-                            </ul>
-                        )}
+                        <h2>{this.state.quote}</h2>
+                        <h3> - {this.state.author ? this.state.author : 'Somebody'}</h3>
                     </div>
                 )}
             </Spring>

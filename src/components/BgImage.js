@@ -11,15 +11,15 @@ export default class BgImage extends Component {
             <div>
                 <div className="BgImage">
                     <img src={`https://source.unsplash.com/${windowWidth}x${windowHeight}/daily?fall`} alt=''></img>
+                    <button className="go-to-todolist-button" onClick={() => scroll.scrollToBottom()} aria-label="scroll to bottom of page">
+                        <FontAwesomeIcon icon={['fas', 'chevron-down']} />
+                    </button>
                 </div>
-                <button className="go-to-todolist-button" onClick={() => scroll.scrollToBottom()} aria-label="scroll to bottom of page">
-                    <FontAwesomeIcon icon={['fas', 'chevron-down']} />
-                </button>
-                <button className="go-to-top-button" onClick={() => scroll.scrollToTop()} aria-label="scroll to bottom of page">
-                    <FontAwesomeIcon icon={['fas', 'chevron-up']} />
-                </button>
                 <div className="BgImage2">
                     <img src={`https://source.unsplash.com/${windowWidth}x${windowHeight}/daily?nature`} alt=''></img>
+                    <button className="go-to-top-button" onClick={() => scroll.scrollToTop()} aria-label="scroll to bottom of page">
+                        <FontAwesomeIcon icon={['fas', 'chevron-up']} />
+                    </button>
                 </div>
             </div>
         )

@@ -2,6 +2,11 @@ import React from 'react';
 import axios from 'axios';
 import TodoListComponent from '../components/TodoListComponent';
 import TodoInputForm from '../components/TodoInputForm';
+import {animateScroll as scroll} from 'react-scroll';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+const windowWidth = window.screen.width * window.devicePixelRatio
+const windowHeight = window.screen.height * window.devicePixelRatio
 
 class TodoListView extends React.Component {
 
@@ -23,7 +28,11 @@ componentDidMount(){
 
 render(){
     return ( 
-        <div>
+        <div className="BgImage2">
+            <img src={`https://source.unsplash.com/${windowWidth}x${windowHeight}/daily?blur`} alt=''></img>
+            <button className="go-to-top-button" onClick={() => scroll.scrollToTop()} aria-label="scroll to bottom of page">
+                <FontAwesomeIcon icon={['fas', 'chevron-up']} />
+            </button>
             <div>
                 <TodoInputForm refreshTodos={this.fetchTodos}/>
             </div>

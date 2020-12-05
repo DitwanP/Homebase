@@ -6,6 +6,8 @@ html{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: white black;
 }
 
 header {
@@ -38,38 +40,39 @@ body {
 /* THE STYLING FOR THE BG IMAGE STARTS HERE */
 
 .BgImage {
-    position: absolute;
+    position: relative;
     top: 0rem;
     left: 0rem;
-    z-index: -1;
-    height: 1080px;
-    width: 1920px;
-    overflow-x: hidden;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
     background-color: black;
+    align-items: center;
+    justify-content: center;
 }
 
 .BgImage img {
-    filter: brightness(50%);
-    height: 1080px;
-    width: 1920px;
+    filter: brightness(40%);
+    background-size: cover;
+    background-position: center;
     overflow-x: hidden;
 }
 
 .BgImage2 {
-    position: absolute;
+    position: relative;
     top: 100%;
     left: 0rem;
-    z-index: -1;
-    height: 1080px;
-    width: 1920px;
-    overflow-x: hidden;
+    z-index: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
     background-color: black;
 }
 
 .BgImage2 img {
-    filter: brightness(50%);
-    height: 1080px;
-    width: 1920px;
+    filter: brightness(40%);
+    background-size: cover;
+    background-position: center;
     overflow-x: hidden;
 }
 
@@ -78,10 +81,10 @@ body {
     color: white;
     background: none;
     border: none;
-    font-size: 4rem;
+    font-size: 2.5vw;
     z-index: 0;
     right: 1.5rem;
-    top: 89rem;
+    bottom: 0.1rem;
     opacity: 100%;
     transition: opacity 1s;
 }
@@ -103,10 +106,10 @@ body {
     color: white;
     background: none;
     border: none;
-    font-size: 4rem;
-    z-index: 5000;
+    font-size: 2.5vw;
+    z-index: 0;
     right: 1.5rem;
-    top: 108rem;
+    top: 0.1rem;
     opacity: 100%;
     transition: opacity 1s;
 }
@@ -160,6 +163,7 @@ body {
     color: rgb(235, 197, 128);
     text-decoration: none;
 }
+
 .hoverable:hover::before, .hoverable:active:before, .hoverable:focus::before{
 opacity: 1;
 transform: translateY(-5px);
@@ -170,12 +174,15 @@ transform: translateY(-5px);
 
 /* THE STYLING FOR THE WEATHER STARTS HERE */
 .city-name-input-container {
-    width: 60%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    width: 65%;
     height: 7rem;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 22rem;
-    background-color: rgba(0, 0, 0, 0.7);
     padding-left: 2rem;
     padding-right: 2rem;
     padding-top: 2rem;
@@ -183,6 +190,7 @@ transform: translateY(-5px);
     flex-direction: column;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
+    z-index: 1;
 }
 
 .city-form {
@@ -210,6 +218,7 @@ transform: translateY(-5px);
 
 .city-form label {
     font-family: 'Montserrat', sans-serif;
+    font-size: 1.5vw;
     font-weight: normal;
     font-style: normal;
     letter-spacing: 0rem;
@@ -220,7 +229,7 @@ transform: translateY(-5px);
     width: 100%;
     height: 100%;
     pointer-events: none;
-    border-bottom: 0.1rem solid rgb(206, 206, 206);
+    border-bottom: 0.2rem solid rgb(206, 206, 206);
 }
 
 .city-form label::after {
@@ -288,27 +297,32 @@ transform: translateY(-5px);
 }
 
 .weather {
-    width: 60%;
-    justify-content: center;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 65%;
+    justify-content: space-between;
     align-items: center;
     margin-right: auto;
     margin-left: auto;
     margin-top: 0rem;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     display: flex;
+    flex-direction: row;
 }
 
 .location-and-time-container {
-    width: 30%;
-    height: 14rem;
+    height: 17rem;
 }
 
 .location-and-time-container h1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 3rem;
-    font-weight: normal;
+    font-size: 3vw;
+    font-weight: bold;
     font-style: normal;
     text-align: left;
     letter-spacing: 0rem;
@@ -318,7 +332,7 @@ transform: translateY(-5px);
 
 .location-and-time-container h2 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.2rem;
+    font-size: 1.5vw;
     font-weight: lighter;
     font-style: normal;
     text-align: left;
@@ -328,7 +342,7 @@ transform: translateY(-5px);
 
 .location-and-time-container h3 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.2rem;
+    font-size: 1.5vw;
     font-weight: lighter;
     font-style: normal;
     text-align: left;
@@ -341,17 +355,15 @@ transform: translateY(-5px);
 }
 
 .high-low-container {
-    width: 50%;
-    height: 14rem;
+    height: 17rem;
     display: block;
-    margin-right: 7rem;
 }
 
 .high-low-container h1 {
     height: 10rem;
     font-family: 'Montserrat', sans-serif;
-    font-size: 6rem;
-    font-weight: normal;
+    font-size: 3.7vw;
+    font-weight: bold;
     letter-spacing: 0.1rem;
     color: white;
     margin-left: 3.5rem;
@@ -361,33 +373,34 @@ transform: translateY(-5px);
 
 .high-low-container h4 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
+    font-size: 1.5vw;
     font-weight: lighter;
     letter-spacing: 0.1rem;
     color: white;
+    margin-top: 0.5rem;
 }
 
 .high-low-container img {
-    width: 100px;
-    height: 100px;
+    width: 7vw;
+    height: 7vw;
     position: relative;
     right: 1rem;
     bottom: 0.5rem;
 }
 
 .conditions-container {
-    width: 20%;
-    height: 14rem;
+    height: 17rem;
     display: block;
 }
 
 .conditions-container h5 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.2rem;
+    font-size: 1.5vw;
     font-weight: lighter;
     letter-spacing: 0rem;
     color: white;
     text-align: left;
+    margin-bottom: 1rem;
 }
 
 .top-h5 {
@@ -401,36 +414,44 @@ transform: translateY(-5px);
 /* THE STYLING FOR THE QUOTE STARTS HERE */
 
 .quote-of-the-day {
-    width: 60%;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 65%;
     justify-content: center;
     align-items: center;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 2rem;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.7);
+    /* background-color: rgba(0, 0, 0, 0.7); */
     padding: 2rem;
 }
 
 .quote-of-the-day h2 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.4rem;
+    font-size: 1.8vw;
     font-weight: lighter;
-    font-style: normal;
+    font-style: italic;
     text-align: left;
     letter-spacing: 0.1rem;
     color: white;
 }
 
+.quote-of-the-day h2::before, .quote-of-the-day h2::after {
+    content: '"';
+}
+
 .quote-of-the-day h3 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
+    font-size: 1.6vw;
     font-weight: normal;
     font-style: italic;
     color: white;
     text-align: right;
     letter-spacing: 0.1rem;
-    margin-top: 2rem;
+    margin-top: 0rem;
 }
 
 .quote-of-the-day ul li {
@@ -445,21 +466,20 @@ transform: translateY(-5px);
 /* THE STYLING FOR THE TODO INPUT FORM STARTS HERE */
 
 .input-form-container {
-    width: 60%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 65%;
     justify-content: center;
     align-items: center;
-    margin-top: 55rem;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2rem;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 2rem;
-    position: absolute;
-    left: 50%;
-    top: 61rem;
-    transform: translateX(-50%);
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
+    z-index: 1;
 }
 
 .todo-title-form {
@@ -485,8 +505,9 @@ transform: translateY(-5px);
 }
 
 .todo-title-form label {
+    font-size: 1.5vw;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
+    font-weight: bold;
     font-style: normal;
     letter-spacing: 0.3rem;
     text-transform: capitalize;
@@ -497,7 +518,8 @@ transform: translateY(-5px);
     width: 100%;
     height: 100%;
     pointer-events: none;
-    border-bottom: 0.1rem solid  rgb(255, 255, 255);
+    border-bottom: 0.2rem solid  rgb(255, 255, 255);
+    margin-bottom: 0.5rem;
 }
 
 .todo-description-form {
@@ -524,8 +546,9 @@ transform: translateY(-5px);
 }
 
 .todo-description-form label {
+    font-size: 1.5vw;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
+    font-weight: bold;
     font-style: normal;
     letter-spacing: 0.3rem;
     text-transform: capitalize;
@@ -536,7 +559,7 @@ transform: translateY(-5px);
     width: 100%;
     height: 100%;
     pointer-events: none;
-    border-bottom: 0.1rem solid  rgb(255, 255, 255);
+    border-bottom: 0.2rem solid  rgb(255, 255, 255);
 }
 
 .todo-title-form label::after, 
@@ -547,7 +570,7 @@ transform: translateY(-5px);
     height: 100%;
     left: 0rem;
     bottom: -0.1rem;
-    border-bottom: 0.2rem solid rgb(235, 197, 128);
+    border-bottom: 0.3rem solid rgb(235, 197, 128);
     transform: translateX(-100%);
     transition: transform 0.3s ease;
 }
@@ -624,7 +647,12 @@ transform: translateY(-5px);
 
 /* THE STYLING FOR THE ENTIRE TODO LIST STARTS HERE */
 .scrollable-div {
-    width: 60%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 65%;
     height: 57rem;
     justify-content: center;
     align-items: center;
@@ -632,9 +660,6 @@ transform: translateY(-5px);
     margin-right: auto;
     overflow-y: auto;
     overflow-x: hidden;
-    position: absolute;
-    top: 137rem;
-    left: 50%;
     transform: translateX(-50%);
 }
 
@@ -646,13 +671,8 @@ transform: translateY(-5px);
     margin-right: auto;
     margin-bottom: 0rem;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 2rem;
-    border-bottom: solid 1px white;
-}
-
-.todo-list-div {
-    margin-bottom: 15rem;
+    padding: 2rem 0rem;
+    border-bottom: solid 2px white;
 }
 
 .todo-component-div[value="true"] {
@@ -660,9 +680,9 @@ transform: translateY(-5px);
 }
 
 .todo-title {
-    font-size: 2.4rem;
+    font-size: 1.6vw;
     font-family: 'Montserrat', sans-serif;
-    font-weight: normal;
+    font-weight: bold;
     font-style: normal;
     text-transform: capitalize;
     letter-spacing: 0.1rem;
@@ -678,8 +698,8 @@ transform: translateY(-5px);
     width: 93%;
     color: rgb(255, 254, 254);
     font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
-    font-weight: lighter;
+    font-size: 1.4vw;
+    font-weight: normal;
     font-style: normal;
     text-transform: lowercase;
     padding-bottom: 0.5rem;
@@ -740,6 +760,186 @@ transform: translateY(-5px);
 /* THE STYLING FOR THE ENTIRE TODO LIST ENDS HERE */
 
 
+@media screen and (max-width:1024px) {
+    .city-name-input-container {
+        width: 70%;
+        height: 9rem;
+    }
+
+    .city-form label {
+        font-size: 2.5vw;
+    }
+
+
+
+    .weather {
+        width: 70%;
+    }
+
+    .location-and-time-container h1 {
+        font-size: 3vw;
+    }
+    
+    .location-and-time-container h2, .location-and-time-container h3 {
+        font-size: 2vw;
+    }
+
+
+
+    .high-low-container h1 {
+        font-size: 3.7vw;
+        margin-top: 1.3rem;
+        margin-bottom: -3rem;
+    }
+    
+    .high-low-container h4 {
+        font-size: 1.8vw;
+        margin-top: 0rem;
+    }
+
+
+    
+    .conditions-container h5 {
+        font-size: 1.8vw;
+        margin-bottom: 0.8rem;
+    }
+
+
+
+    .quote-of-the-day {
+        width: 70%;
+    }
+
+    .quote-of-the-day h2 {
+        font-size: 2.5vw;
+    }
+
+    .quote-of-the-day h3 {
+        font-size: 2.2vw;
+    }
+
+
+
+    .input-form-container {
+        width: 70%;
+    }
+
+    .todo-title-form label {
+        font-size: 2vw;
+    }
+
+    .todo-description-form label {
+        font-size: 2vw;
+    }
+
+    .scrollable-div {
+        width: 70%;
+        top: 32%;
+    }
+
+    .todo-component-div {
+        padding: 1.5rem 0rem;
+    }
+
+    .todo-title {
+        font-size: 2vw;
+    }
+
+    .todo-content {
+        font-size: 1.8vw;
+    }
+}
+
+
+@media screen and (max-width:480px) {
+    .city-name-input-container {
+        width: 90%;
+        height: 9rem;
+    }
+
+    .city-form label {
+        font-size: 3.5vw;
+    }
+
+
+
+    .weather {
+        width: 70%;
+    }
+
+    .location-and-time-container h1 {
+        font-size: 3vw;
+    }
+    
+    .location-and-time-container h2, .location-and-time-container h3 {
+        font-size: 2vw;
+    }
+
+
+
+    .high-low-container h1 {
+        font-size: 3.7vw;
+        margin-top: 1.3rem;
+        margin-bottom: -3rem;
+    }
+    
+    .high-low-container h4 {
+        font-size: 1.8vw;
+        margin-top: 0rem;
+    }
+
+
+    
+    .conditions-container h5 {
+        font-size: 1.8vw;
+        margin-bottom: 0.8rem;
+    }
+
+
+
+    .quote-of-the-day {
+        width: 70%;
+    }
+
+    .quote-of-the-day h2 {
+        font-size: 2.5vw;
+    }
+
+    .quote-of-the-day h3 {
+        font-size: 2.2vw;
+    }
+
+
+
+    .input-form-container {
+        width: 70%;
+    }
+
+    .todo-title-form label {
+        font-size: 2vw;
+    }
+
+    .todo-description-form label {
+        font-size: 2vw;
+    }
+
+    .scrollable-div {
+        width: 70%;
+        top: 32%;
+    }
+
+    .todo-component-div {
+        padding: 1.5rem 0rem;
+    }
+
+    .todo-title {
+        font-size: 2vw;
+    }
+
+    .todo-content {
+        font-size: 1.8vw;
+    }
+}
 
 
 

@@ -101,7 +101,7 @@ left: 0;
 width: 100%;
 margin: 0 auto;
 height: 6rem;
-background-color: rgba(0, 0, 0, 0.7);
+background-color: rgba(0, 0, 0, 0.3);
 z-index: 1000;
 
 ul {
