@@ -136,7 +136,6 @@ body {
     backface-visibility: hidden;
     vertical-align: middle;
     position: relative;
-    bottom: 1rem;
     box-shadow: 0 0 1px rgba(0,0,0,0);
     color: white;
     transform: translateZ(0);
@@ -374,7 +373,7 @@ transform: translateY(-5px);
 .high-low-container h4 {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5vw;
-    font-weight: lighter;
+    font-weight: normal;
     letter-spacing: 0.1rem;
     color: white;
     margin-top: 0.5rem;
@@ -507,7 +506,7 @@ transform: translateY(-5px);
 .todo-title-form label {
     font-size: 1.5vw;
     font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
+    font-weight: normal;
     font-style: normal;
     letter-spacing: 0.3rem;
     text-transform: capitalize;
@@ -548,7 +547,7 @@ transform: translateY(-5px);
 .todo-description-form label {
     font-size: 1.5vw;
     font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
+    font-weight: normal;
     font-style: normal;
     letter-spacing: 0.3rem;
     text-transform: capitalize;
@@ -703,7 +702,6 @@ transform: translateY(-5px);
     font-style: normal;
     text-transform: lowercase;
     padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
 }
 
 /* .todo-content::first-letter {
@@ -759,112 +757,46 @@ transform: translateY(-5px);
 }
 /* THE STYLING FOR THE ENTIRE TODO LIST ENDS HERE */
 
-
-@media screen and (max-width:1024px) {
-    .city-name-input-container {
-        width: 70%;
-        height: 9rem;
+@media screen and (min-width:2000px) {
+    .high-low-container h4 {
+        margin-top: 3rem;
     }
 
-    .city-form label {
-        font-size: 2.5vw;
-    }
-
-
-
-    .weather {
-        width: 70%;
-    }
 
     .location-and-time-container h1 {
-        font-size: 3vw;
+        font-size: 2.5vw;
     }
     
     .location-and-time-container h2, .location-and-time-container h3 {
-        font-size: 2vw;
+        font-size: 1.5vw;
     }
-
-
-
-    .high-low-container h1 {
-        font-size: 3.7vw;
-        margin-top: 1.3rem;
-        margin-bottom: -3rem;
-    }
-    
-    .high-low-container h4 {
-        font-size: 1.8vw;
-        margin-top: 0rem;
-    }
-
-
-    
-    .conditions-container h5 {
-        font-size: 1.8vw;
-        margin-bottom: 0.8rem;
-    }
-
-
 
     .quote-of-the-day {
-        width: 70%;
+        margin-top: 5rem;
     }
+}
 
-    .quote-of-the-day h2 {
-        font-size: 2.5vw;
-    }
-
-    .quote-of-the-day h3 {
-        font-size: 2.2vw;
-    }
-
-
-
-    .input-form-container {
-        width: 70%;
-    }
-
-    .todo-title-form label {
-        font-size: 2vw;
-    }
-
-    .todo-description-form label {
-        font-size: 2vw;
-    }
-
-    .scrollable-div {
-        width: 70%;
-        top: 32%;
-    }
-
-    .todo-component-div {
-        padding: 1.5rem 0rem;
-    }
-
-    .todo-title {
-        font-size: 2vw;
-    }
-
-    .todo-content {
-        font-size: 1.8vw;
+@media screen and (max-width:1400px) {
+    .high-low-container h1 {
+        margin-bottom: -4rem;
     }
 }
 
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:1024px) {
     .city-name-input-container {
         width: 90%;
         height: 9rem;
     }
 
     .city-form label {
-        font-size: 3.5vw;
+        font-size: 2.5vw;
     }
 
 
 
     .weather {
-        width: 70%;
+        width: 90%;
     }
 
     .location-and-time-container h1 {
@@ -898,7 +830,7 @@ transform: translateY(-5px);
 
 
     .quote-of-the-day {
-        width: 70%;
+        width: 90%;
     }
 
     .quote-of-the-day h2 {
@@ -912,7 +844,7 @@ transform: translateY(-5px);
 
 
     .input-form-container {
-        width: 70%;
+        width: 85%;
     }
 
     .todo-title-form label {
@@ -924,8 +856,8 @@ transform: translateY(-5px);
     }
 
     .scrollable-div {
-        width: 70%;
-        top: 32%;
+        width: 85%;
+        top: 35%;
     }
 
     .todo-component-div {
@@ -934,12 +866,154 @@ transform: translateY(-5px);
 
     .todo-title {
         font-size: 2vw;
+        width: 85%;
     }
 
     .todo-content {
         font-size: 1.8vw;
+        width: 85%;
     }
 }
 
 
+@media screen and (max-width:480px) {
 
+    .city-name-input-container {
+        width: 100%;
+        height: 9rem;
+    }
+
+    .city-form label {
+        font-size: 4.5vw;
+    }
+
+    .format-example {
+        font-size: 3.5vw;
+    }
+
+    .enter-city-button {
+        font-size: 4.5vw;
+    }
+
+
+
+    .weather {
+        width: 100%;
+        height: 18%;
+    }
+
+    .location-and-time-container h1 {
+        font-size: 4vw;
+    }
+    
+    .location-and-time-container h2, .location-and-time-container h3 {
+        font-size: 2.5vw;
+    }
+
+
+
+    .high-low-container h1 {
+        font-size: 7vw;
+        margin-top: 2rem;
+        margin-bottom: -6.5rem;
+        margin-left: 1.5rem;
+    }
+    
+    .high-low-container h4 {
+        font-size: 2.5vw;
+        margin-top: 0rem;
+    }
+
+    .high-low-container img {
+        position: relative;
+        right: 0rem;
+        bottom: 0rem;
+        width: 10vw;
+        height: 10vw;
+    }
+
+
+    
+    .conditions-container h5 {
+        font-size: 2.4vw;
+        margin-bottom: 0.8rem;
+    }
+
+    .conditions-container h5:first-child {
+        margin-top: 2rem;
+    }
+
+
+
+    .quote-of-the-day {
+        width: 100%;
+        top: 50%;
+    }
+
+    .quote-of-the-day h2 {
+        font-size: 3.5vw;
+    }
+
+    .quote-of-the-day h3 {
+        font-size: 3vw;
+    }
+
+
+
+    .go-to-todolist-button {
+        font-size: 6vw;
+        right: 0.8rem;
+    }
+
+    .go-to-top-button {
+        font-size: 6vw;
+        right: 0.8rem;
+    }
+
+
+
+    .input-form-container {
+        width: 90%;
+    }
+
+    .todo-title-form label {
+        font-size: 3.5vw;
+    }
+
+    .todo-description-form label {
+        font-size: 3.5vw;
+    }
+
+    .scrollable-div {
+        width: 90%;
+        top: 35%;
+    }
+
+    .todo-component-div {
+        padding: 1rem 0rem;
+    }
+
+    .todo-title {
+        font-size: 3.5vw;
+        width: 85%;
+    }
+
+    .todo-content {
+        font-size: 2.8vw;
+        width: 85%;
+        margin-bottom: 0rem;
+    }
+
+    .todo-complete-btn {
+        font-size: 1.2rem;
+        margin-right: 1rem;
+    }
+    
+    .todo-delete-btn {
+        font-size: 1.2rem;
+    }
+
+    .add-todo-button{
+        font-size: 1.5rem;
+    }
+}

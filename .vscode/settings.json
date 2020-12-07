@@ -12,4 +12,6 @@
     "python.linting.pycodestyleArgs": [
         "--ignore=E501"
     ],
+    "editor.fontFamily": "Input Mono",
+    "editor.fontSize": 18,
 }
