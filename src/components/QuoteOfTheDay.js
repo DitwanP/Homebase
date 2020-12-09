@@ -16,7 +16,6 @@ class QuoteOfTheDay extends React.Component {
                 quote: response.data.contents.quotes[0].quote,
                 author: response.data.contents.quotes[0].author,
             });
-            console.log(response.data)
         })
         .catch((error) => {
             // Error
@@ -26,7 +25,6 @@ class QuoteOfTheDay extends React.Component {
                     author: 'nobody',
                 });
             }
-            console.log(error.config);
         });
     }
 

@@ -14,7 +14,7 @@ state = {
 fetchTodos = (event) => {
     axios.get('https://homebase-rd.herokuapp.com/api/todo').then(response => {
         this.setState({
-            todoListData: response.data
+            todoListData: response.data.sort((a,b) => a.id - b.id)
         });
     });
 }
