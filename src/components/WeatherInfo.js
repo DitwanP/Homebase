@@ -11,8 +11,6 @@ const myDefaultCity = "Coral Springs";
 const myDefaultCountry = "US";
 const units = "imperial";
 const defaultWeatherIcon = "50d"
-const windowWidth = window.screen.width * window.devicePixelRatio
-const windowHeight = window.screen.height * window.devicePixelRatio
 let timeAndDay = moment().format("dddd h:00a");
 
 class WeatherInfo extends React.Component {
@@ -87,8 +85,7 @@ class WeatherInfo extends React.Component {
       >
         {(props) => (
           <div style={props}>
-            <div className="BgImage">
-              <img src={`https://source.unsplash.com/${windowWidth}x${windowHeight}/daily?fall`} alt=''></img>
+              <div className="BgImage"></div>
               <button className="go-to-todolist-button" onClick={() => scroll.scrollToBottom()} aria-label="scroll to bottom of page">
                   <FontAwesomeIcon icon={['fas', 'chevron-down']} />
               </button>
@@ -140,16 +137,22 @@ class WeatherInfo extends React.Component {
                 </div>
                 <div className="high-low-container">
                   <h1>
-                    {Math.round(this.state.currTemp)}°
-                    <img
-                      src={`https://openweathermap.org/img/wn/${this.state.icon}@2x.png`}
-                      alt=""
-                    />
+                    <div className="currTemp-container">
+                      {Math.round(this.state.currTemp)}°
+                      <img
+                        src={`https://openweathermap.org/img/wn/${this.state.icon}@2x.png`}
+                        alt=""
+                      />
+                    </div>
+                    <div className="hlTemps-container">
+                      <h4>
+                        H-{Math.round(this.state.highTemp)}° | &nbsp;
+                      </h4>
+                      <h4>
+                        L-{Math.round(this.state.lowTemp)}°
+                      </h4>
+                    </div>
                   </h1>
-                  <h4>
-                    High - {Math.round(this.state.highTemp)}° | Low -{" "}
-                    {Math.round(this.state.lowTemp)}°
-                  </h4>
                 </div>
                 <div className="conditions-container">
                   <h5 className="top-h5">
@@ -159,7 +162,6 @@ class WeatherInfo extends React.Component {
                   <h5>Wind - {Math.round(this.state.wind)}mph </h5>
                 </div>
               </div>
-            </div>
           </div>
         )}
       </Spring>
