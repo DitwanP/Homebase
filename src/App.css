@@ -49,7 +49,7 @@ body {
     opacity: 1;
     transition: opacity 200ms ease-in-out 0s;
     filter: brightness(50%);
-    background: url(https://source.unsplash.com/3840x2160/daily?water) no-repeat center center fixed;
+    background: url(https://source.unsplash.com/3840x2160/daily?nature) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -67,7 +67,7 @@ body {
     opacity: 1;
     transition: opacity 200ms ease-in-out 0s;
     filter: brightness(50%);
-    background: url(https://source.unsplash.com/3840x2160/daily?puppy) no-repeat center center fixed;
+    background: url(https://source.unsplash.com/3840x2160/daily?dog) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
