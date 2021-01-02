@@ -28,7 +28,7 @@ render(){
         <div className="todo-list">
             <div className="BgImage2">
             </div>
-            <button className="go-to-top-button" onClick={() => scroll.scrollToTop()} aria-label="scroll to bottom of page">
+            <button className="go-to-top-button" onClick={() => scroll.scrollToTop()} aria-label="scroll to top of page">
                 <FontAwesomeIcon icon={['fas', 'chevron-up']} />
             </button>
             <TodoInputForm refreshTodos={this.fetchTodos}/>
