@@ -1,38 +1,32 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import { Spring } from 'react-spring/renderprops';
 
-class QuoteOfTheDay extends React.Component {
-    state = {
-        quote: '',
-        author: '',
-    }
+const QuoteOfTheDay = () => {
+
+    const [quote, setQuote] = useState("");
+    const [author, setAuthor] = useState("");
     
-    fetchTodaysQuote = () => {
+    function fetchTodaysQuote(){
         axios.get('https://quotes.rest/qod?category=inspire&language=en')
         .then(response => {
             // Success
-            this.setState({
-                quote: response.data.contents.quotes[0].quote,
-                author: response.data.contents.quotes[0].author,
-            });
+            setQuote(response.data.contents.quotes[0].quote);
+            setAuthor(response.data.contents.quotes[0].author);
         })
         .catch((error) => {
             // Error
             if (error.response) {
-                this.setState({
-                    quote: "Sorry there's no quote at the moment :(",
-                    author: 'nobody',
-                });
+                setQuote("Sorry there's no quote at the moment :(");
+                setAuthor("nobody");
             }
         });
     }
 
-    componentDidMount(){
-        this.fetchTodaysQuote();
-    }
+    useEffect(() => {
+        fetchTodaysQuote();
+    }, [])
 
-    render() {
         return(
             <Spring 
                 from={{ opacity: 0}} 
@@ -41,13 +35,12 @@ class QuoteOfTheDay extends React.Component {
             >
                 {props => (
                     <div style={props} className="quote-of-the-day">                      
-                        <h2>{this.state.quote}</h2>
-                        <h3> - {this.state.author ? this.state.author : 'Somebody'}</h3>
+                        <h2>{quote}</h2>
+                        <h3> - {author ? author : 'Somebody'}</h3>
                     </div>
                 )}
             </Spring>
         )
-    }
 }
 
 export default QuoteOfTheDay;

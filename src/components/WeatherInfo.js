@@ -5,13 +5,14 @@ import moment from "moment";
 import {animateScroll as scroll} from 'react-scroll';
 import { FormGroup, Form, Button, Col } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import QuoteOfTheDay from './QuoteOfTheDay';
 
 const myApiKey = process.env.REACT_APP_WEATHER_API_KEY;
 const myDefaultCity = "Coral Springs";
 const myDefaultCountry = "US";
 const units = "imperial";
 const defaultWeatherIcon = "50d"
-let timeAndDay = moment().format("dddd h:00a");
+let timeAndDay = moment().format("dddd, MMM D - h:00a");
 
 class WeatherInfo extends React.Component {
 
@@ -84,11 +85,7 @@ class WeatherInfo extends React.Component {
         config={{ duration: 1500 }}
       >
         {(props) => (
-          <div style={props}>
-              <div className="BgImage"></div>
-              <button className="go-to-todolist-button" onClick={() => scroll.scrollToBottom()} aria-label="scroll to bottom of page">
-                  <FontAwesomeIcon icon={['fas', 'chevron-down']} />
-              </button>
+          <div style={props} className="weather-and-quote-container">
               <div className="city-name-input-container">
                 <Form noValidate>
                   <Form.Row bsPrefix="title-row">
@@ -110,7 +107,7 @@ class WeatherInfo extends React.Component {
                             Enter a city
                             <span className="format-example">
                               {" "}
-                              (ex: MyCity, US){" "}
+                              (ex: Los Angeles, CA){" "}
                             </span>
                           </span>
                         </label>
@@ -139,17 +136,13 @@ class WeatherInfo extends React.Component {
                   <h1>
                     <div className="currTemp-container">
                       {Math.round(this.state.currTemp)}°
-                      <img
-                        src={`https://openweathermap.org/img/wn/${this.state.icon}@2x.png`}
-                        alt=""
-                      />
                     </div>
                     <div className="hlTemps-container">
                       <h4>
-                        H-{Math.round(this.state.highTemp)}° | &nbsp;
+                        {Math.round(this.state.highTemp)}° | &nbsp;
                       </h4>
                       <h4>
-                        L-{Math.round(this.state.lowTemp)}°
+                        {Math.round(this.state.lowTemp)}°
                       </h4>
                     </div>
                   </h1>
@@ -159,9 +152,14 @@ class WeatherInfo extends React.Component {
                     Feels like - {Math.round(this.state.feelsLike)}°
                   </h5>
                   <h5>Humidity - {this.state.humidity}% </h5>
-                  <h5>Wind - {Math.round(this.state.wind)}mph </h5>
+                  <h5>Wind speed - {Math.round(this.state.wind)}mph </h5>
                 </div>
               </div>
+              <QuoteOfTheDay /> 
+              <button className="go-to-todolist-button" onClick={() => scroll.scrollToBottom()} aria-label="scroll to bottom of page">
+                  <FontAwesomeIcon icon="chevron-down" />
+              </button>
+              <div className="BgImage"></div>          
           </div>
         )}
       </Spring>

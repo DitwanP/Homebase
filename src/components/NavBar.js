@@ -34,7 +34,7 @@ export default class NavBar extends Component {
             <Transition>
                 <StyledNavbar className={this.state.show ? "active" : "hidden"}>
                     <div className="logo">
-                        <h1 className="brand"> HOMEBASE </h1>
+                        <h1 className="brand"> Homebase </h1>
                     </div>
                     <div className="site-links">
                         <ul>
@@ -141,7 +141,7 @@ ul li a {
     float: left;
     margin: 0rem 6.6rem;
     color: #fff;
-    font-weight: normal;
+    font-weight: 800;
     font-size: 2.2rem;
     letter-spacing: 3px;
 }
